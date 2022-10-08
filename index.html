@@ -1,132 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>App Taquions Turismo</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="topo">
-			<h1>APP COTAQUIONS</h1>
-		</div>
-		<div>
-			<form action="">
-				<div class="container">
-					<fieldset>
-						<legend>Roteiro</legend>
-						<p>1 - Modalidade Trajeto</p>
-						<div class="checkbox">
-							<input type="radio" name="modalidade" id="agp" /><label for="agp"
-								>Interestadual</label
-							>
-							<input type="radio" name="modalidade" id="antt" /><label
-								for="antt"
-								>Intermunicipal</label
-							>
-						</div>
-						<div class="contratante">
-							<p>2 - Contratante</p>
-							<input type="text" id="contratante" autofocus />
-							<p>3 - Endereço</p>
-							<input
-								type="text"
-								id="endereco"
-								placeholder="Cidade/Rua/Bairro"
-							/>
-							<p>4 - Telefone</p>
-							<input
-								type="tel"
-								id="tel"
-								maxlength="15"
-								onkeyup="handlePhone(event)"
-							/>
-						</div>
-						<div class="contratante">
-							<p>5 - Data do embarque</p>
-							<input type="date" name="dtembarque" id="dtembarque" />
-							<p>6 - Data Desembarque</p>
-							<input type="date" name="dtdesembarque" id="dtdesembarque" />
-						</div>
-						<div class="contratante">
-							<p>8 - Local do embarque</p>
-							<input type="text" name="lcembarque" id="lcembarque" />
-							<p>9 - Local do desembarque</p>
-							<input
-								type="text"
-								name="lcdesembarque"
-								id="lcdesembarque"
-								onChange="prepercurso()"
-							/>
-						</div>
-					</fieldset>
-					<fieldset>
-						<legend>Veiculo</legend>
-						<div class="checkbox">
-							<input
-								type="radio"
-								value="1"
-								name="veiculoSelect"
-								id="vecld"
-							/><label for="vecld">LD 1200</label>
-							<input
-								type="radio"
-								value="2"
-								name="veiculoSelect"
-								id="vecg6"
-							/><label for="vecg6">G6 EXECUTIVO</label>
-							<input
-								type="radio"
-								value="3"
-								name="veiculoSelect"
-								id="vecvan"
-							/><label for="vecvan">VAN Furgão</label>
-						</div>
-					</fieldset>
-					<fieldset>
-						<legend>Informações KM</legend>
-						<div class="vazio">
-							<table id="vazio">
-								<tr>
-									<th>Percuso</th>
-									<th>Km vazio</th>
-									<th>Total de Kms Vazio R$</th>
-								</tr>
-								<tr>
-									<td><input type="text" /></td>
-									<td><input type="number" name="" id="kmvazio" /></td>
-									<td>R$ 0,00</td>
-								</tr>
-							</table>
-						</div>
-						<div class="cheio">
-							<table id="cheio">
-								<tr>
-									<th>Percuso</th>
-									<th>Km Cheio</th>
-									<th>Total de Kms Cheio R$</th>
-								</tr>
-								<tr>
-									<td>
-										<input type="text" name="percusoIda" id="percursoIda" />
-									</td>
-									<td>
-										<input
-											type="number"
-											name="kmcheio"
-											id="kmcheio"
-											onchange="pegarkmcheio()"
-										/>
-									</td>
-									<td id="valorKmCheio">R$ 0,00</td>
-								</tr>
-							</table>
-						</div>
-					</fieldset>
-				</div>
-			</form>
-		</div>
-		<script src="main.js"></script>
-	</body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>App Taquions Turismo</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div class="topo">
+         <h1>APP COTAQUIONS</h1>
+      </div>
+      <div>
+         <form action="">
+            <div class="container">
+               <fieldset>
+                  <legend>Roteiro</legend>
+                  <p>1 - Modalidade Trajeto</p>
+                  <div class="checkbox">
+                     <input type="radio" name="modalidade" id="agp" /><label
+                        for="agp"
+                        >Interestadual</label
+                     >
+                     <input type="radio" name="modalidade" id="antt" /><label
+                        for="antt"
+                        >Intermunicipal</label
+                     >
+                  </div>
+                  <div class="contratante">
+                     <p>2 - Contratante</p>
+                     <input type="text" id="contratante" autofocus />
+                     <p>3 - Endereço</p>
+                     <input
+                        type="text"
+                        id="endereco"
+                        placeholder="Cidade/Rua/Bairro"
+                     />
+                     <p>4 - Telefone</p>
+                     <input
+                        type="tel"
+                        id="tel"
+                        maxlength="15"
+                        onkeyup="handlePhone(event)"
+                     />
+                  </div>
+                  <div class="contratante">
+                     <p>5 - Data do embarque</p>
+                     <input type="date" name="dtembarque" id="dtembarque" />
+                     <p>6 - Data Desembarque</p>
+                     <input
+                        type="date"
+                        name="dtdesembarque"
+                        id="dtdesembarque"
+                     />
+                  </div>
+                  <div class="contratante">
+                     <p>8 - Local do embarque</p>
+                     <input type="text" name="lcembarque" id="lcembarque" />
+                     <p>9 - Local do desembarque</p>
+                     <input
+                        type="text"
+                        name="lcdesembarque"
+                        id="lcdesembarque"
+                        onChange="prepercurso()"
+                     />
+                  </div>
+               </fieldset>
+               <!--  <fieldset>
+                  <legend>Veiculo</legend>
+                  <div class="checkbox">
+                     <input
+                        type="radio"
+                        value="1"
+                        name="veiculoSelect"
+                        id="vecld"
+                     /><label for="vecld">LD 1200</label>
+                     <input
+                        type="radio"
+                        value="2"
+                        name="veiculoSelect"
+                        id="vecg6"
+                     /><label for="vecg6">G6 EXECUTIVO</label>
+                     <input
+                        type="radio"
+                        value="3"
+                        name="veiculoSelect"
+                        id="vecvan"
+                     /><label for="vecvan">VAN Furgão</label>
+                  </div>
+               </fieldset> -->
+               <fieldset>
+                  <legend>Veiculos</legend>
+                  <div class="container">
+                     <label for="veiculos">Escolha o modelo do veiculo:</label>
+                     <select
+                        name="veiculos"
+                        id="veiculos"
+                        onchange="AlterarValorKm()"
+                     >
+                        <option value="priceLD">LD 1200</option>
+                        <option value="priceG6">G6 EXECUTIVO</option>
+                        <option value="priceVANF">VAN Furgão</option>
+                        <option value="priceVANC">VAN Sprinter</option>
+                     </select>
+                  </div>
+               </fieldset>
+               <fieldset>
+                  <legend>Informações KM</legend>
+                  <div class="vazio">
+                     <table id="vazio">
+                        <tr>
+                           <th>Percuso</th>
+                           <th>Km vazio</th>
+                           <th>Total de Kms Vazio R$</th>
+                        </tr>
+                        <tr>
+                           <td><input type="text" /></td>
+                           <td>
+                              <input
+                                 type="number"
+                                 name=""
+                                 id="kmvazio"
+                                 onchange="AlterarValorKm()"
+                              />
+                           </td>
+                           <td id="valorKmVazio">R$ 0,00</td>
+                        </tr>
+                     </table>
+                  </div>
+                  <div class="cheio">
+                     <table id="cheio">
+                        <tr>
+                           <th>Percuso</th>
+                           <th>Km Cheio</th>
+                           <th>Total de Kms Cheio R$</th>
+                        </tr>
+                        <tr>
+                           <td>
+                              <input
+                                 type="text"
+                                 name="percusoIda"
+                                 id="percursoIda"
+                              />
+                           </td>
+                           <td>
+                              <input
+                                 type="number"
+                                 name="kmcheio"
+                                 id="kmcheio"
+                                 onchange="AlterarValorKm()"
+                              />
+                           </td>
+                           <td id="valorKmCheio">R$ 0,00</td>
+                        </tr>
+                     </table>
+                  </div>
+               </fieldset>
+               <fieldset>
+                  <legend>Hospedagem</legend>
+                  <table id="hospedagem">
+                     <tr>
+                        <th>Nome do Hotel</th>
+                        <th>Check-in</th>
+                        <th>Check-Out</th>
+                        <th>Diárias</th>
+                        <th>Valor Total</th>
+                     </tr>
+                     <tr>
+                        <td><input type="text" /></td>
+                        <td><input type="date" name="" id="" /></td>
+                        <td><input type="date" name="" id="" /></td>
+                        <td><input type="number" name="" id="" /></td>
+                        <td><input type="number" name="" id="" /></td>
+                     </tr>
+                  </table>
+               </fieldset>
+            </div>
+         </form>
+      </div>
+      <script src="main.js"></script>
+   </body>
 </html>
