@@ -22,28 +22,7 @@ const phoneMask = (value) => {
    value = value.replace(/(\d)(\d{4})$/, "$1-$2");
    return value;
 };
-
-// function selecionaLD() {
-// 	const selectld1 = priceLD;
-// 	console.log(selectld1);
-// 	pegarkmcheio();
-// }
-// function selecionaG6() {
-// 	const veiculoSelect = priceG6;
-// 	console.log(veiculoSelect);
-// 	pegarkmcheio();
-// }
-// function selecionaVAN() {
-// 	const veiculoSelect = priceVAN;
-// 	console.log(veiculoSelect);
-// 	pegarkmcheio();
-// }
-
-//function verificaChecked() {
-//	let radiold = document.querySelector("#vecld");
-//	let ldradio = radiold.ariaChecked;
-//	console.log(ldradio);
-//}
+// Formatação Money
 
 function attveiculo() {
    let selecionar = document.querySelector("#veiculos");
