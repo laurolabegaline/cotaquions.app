@@ -16,73 +16,69 @@
 				<div class="container">
 					<fieldset>
 						<legend>Roteiro</legend>
-						<p>1 - Modalidade Trajeto</p>
-						<div class="checkbox">
-							<input type="radio" name="modalidade" id="agp" /><label for="agp"
-								>Interestadual</label
-							>
-							<input type="radio" name="modalidade" id="antt" /><label
-								for="antt"
-								>Intermunicipal</label
-							>
-						</div>
-						<div class="contratante">
-							<p>2 - Contratante</p>
-							<input class="bordertheme" type="text" id="contratante" />
-							<p>3 - Endereço</p>
-							<input
-								type="text"
-								class="bordertheme"
-								id="endereco"
-								placeholder="Cidade/Rua/Bairro"
-							/>
-							<p>4 - Telefone</p>
-							<input
-								type="tel"
-								class="bordertheme"
-								id="tel"
-								maxlength="15"
-								onkeyup="handlePhone(event)"
-							/>
-						</div>
-						<div class="contratante">
-							<p>5 - Data do embarque</p>
-							<input
-								class="bordertheme"
-								type="date"
-								name="dtembarque"
-								id="dtembarque"
-							/>
-							<p>6 - Data Desembarque</p>
-							<input
-								class="bordertheme"
-								type="date"
-								name="dtdesembarque"
-								id="dtdesembarque"
-							/>
-						</div>
-						<div class="contratante">
-							<p>8 - Local do embarque</p>
-							<input
-								class="bordertheme"
-								type="text"
-								name="lcembarque"
-								id="lcembarque"
-							/>
-							<p>9 - Local do desembarque</p>
-							<input
-								class="bordertheme"
-								type="text"
-								name="lcdesembarque"
-								id="lcdesembarque"
-								onChange="prepercurso()"
-							/>
+						<div class="roteiro">
+							<div class="flex">
+								<p>Contratante</p>
+								<input class="bordertheme" type="text" id="contratante" />
+								<p>Endereço</p>
+								<input
+									type="text"
+									class="bordertheme"
+									id="endereco"
+									placeholder="Cidade/Rua/Bairro"
+								/>
+							</div>
+							<div class="flex">
+								<p>Telefone</p>
+								<input
+									type="tel"
+									class="bordertheme"
+									id="tel"
+									maxlength="15"
+									onkeyup="handlePhone(event)"
+								/>
+								<p>5 - CPF ou CNPJ</p>
+								<input type="tel" class="bordertheme" id="tel" maxlength="20" />
+							</div>
+							<div class="flex">
+								<p>5 - Data do embarque</p>
+								<input
+									class="bordertheme"
+									type="date"
+									name="dtembarque"
+									id="dtembarque"
+								/>
+								<p>6 - Data Desembarque</p>
+								<input
+									class="bordertheme"
+									type="date"
+									name="dtdesembarque"
+									id="dtdesembarque"
+								/>
+							</div>
+							<div class="flex">
+								<p>8 - Local do embarque</p>
+								<input
+									class="bordertheme"
+									type="text"
+									name="lcembarque"
+									id="lcembarque"
+								/>
+								<p>9 - Local do desembarque</p>
+								<input
+									class="bordertheme"
+									type="text"
+									name="lcdesembarque"
+									id="lcdesembarque"
+									onChange="prepercurso()"
+								/>
+							</div>
 						</div>
 					</fieldset>
 					<fieldset>
 						<legend>Veiculo</legend>
 						<div class="container">
-							<label for="veiculos">Escolha o modelo do veiculo:</label>
+							<label for="veiculos">Selecione modelo do veiculo:</label>
 							<select
 								class="bordertheme"
 								name="veiculos"
@@ -94,6 +90,14 @@
 								<option value="priceVANF">VAN Furgão</option>
 								<option value="priceVANC">VAN Sprinter</option>
 							</select>
+							<div>
+								<img
+									id="galeria"
+									class="galeria"
+									src="./img/priceLD.jpg"
+									alt=""
+								/>
+							</div>
 						</div>
 					</fieldset>
 					<fieldset>

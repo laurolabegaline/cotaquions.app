@@ -27,7 +27,7 @@ html {
 	font: var(--title-font-size) var(--title-font);
 }
 .newtrip {
-	padding: 20px;
+	padding: 5px 40px;
 	background-color: rgb(195, 192, 192);
 }
 fieldset {
@@ -45,14 +45,20 @@ legend {
 	background-color: white;
 	border-radius: 15px;
 }
-.container p,
-input {
-	margin: 2px 0px 10px 20px;
-	display: block;
+.container p {
 	height: 22px;
-	border-radius: 4px;
-	padding: 4px 10px;
+	margin: 0px 1rem;
 }
+
+div .roteiro {
+	padding: 15px;
+}
+div .flex {
+	display: flex;
+	justify-content: flex-start;
+	margin: 10px 5px;
+}
+
 select {
 	background-color: var(--color-theme);
 	color: white;
@@ -61,6 +67,9 @@ select {
 	padding: 5px;
 	border-radius: 20px;
 	text-align: center;
+}
+.galeria {
+	width: 600px;
 }
 
 .container {
@@ -87,6 +96,8 @@ input.button {
 }
 .bordertheme {
 	border: 1px solid rgb(173, 173, 173);
+	border-radius: 10px;
+	text-align: center;
 }
 table,
 th,
