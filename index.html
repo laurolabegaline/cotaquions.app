@@ -6,6 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>COTAQUIONS - Sistema de Cotação</title>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<div class="topo">
@@ -16,14 +22,19 @@
 				<div class="container">
 					<fieldset>
 						<legend>Roteiro</legend>
-						<div class="roteiro">
+						<div class="main">
 							<div class="flex">
 								<p>Contratante</p>
-								<input class="bordertheme" type="text" id="contratante" />
+								<input
+									class="bordertheme text"
+									type="text"
+									id="contratante"
+									maxlength="100"
+								/>
 								<p>Endereço</p>
 								<input
 									type="text"
-									class="bordertheme"
+									class="bordertheme text"
 									id="endereco"
 									placeholder="Cidade/Rua/Bairro"
 								/>
@@ -37,18 +48,24 @@
 									maxlength="15"
 									onkeyup="handlePhone(event)"
 								/>
-								<p>5 - CPF ou CNPJ</p>
-								<input type="tel" class="bordertheme" id="tel" maxlength="20" />
+								<p>CPF ou CNPJ</p>
+								<input
+									type="text"
+									class="bordertheme"
+									onfocus="retirarFormatacao(this)"
+									onblur="formatarCampo(this)"
+									maxlength="16"
+								/>
 							</div>
 							<div class="flex">
-								<p>5 - Data do embarque</p>
+								<p>Data do embarque</p>
 								<input
 									class="bordertheme"
 									type="date"
 									name="dtembarque"
 									id="dtembarque"
 								/>
-								<p>6 - Data Desembarque</p>
+								<p>Data Desembarque</p>
 								<input
 									class="bordertheme"
 									type="date"
@@ -57,16 +74,16 @@
 								/>
 							</div>
 							<div class="flex">
-								<p>8 - Local do embarque</p>
+								<p>Local do embarque</p>
 								<input
-									class="bordertheme"
+									class="bordertheme text"
 									type="text"
 									name="lcembarque"
 									id="lcembarque"
 								/>
-								<p>9 - Local do desembarque</p>
+								<p>Local do desembarque</p>
 								<input
-									class="bordertheme"
+									class="bordertheme text"
 									type="text"
 									name="lcdesembarque"
 									id="lcdesembarque"
@@ -77,7 +94,7 @@
 					</fieldset>
 					<fieldset>
 						<legend>Veiculo</legend>
-						<div class="container">
+						<div class="main">
 							<label for="veiculos">Selecione modelo do veiculo:</label>
 							<select
 								class="bordertheme"
@@ -105,14 +122,15 @@
 						<div class="vazio">
 							<table id="vazio">
 								<tr>
-									<th class="th1">Percuso</th>
-									<th class="th2">Km vazio</th>
-									<th class="th3">Total de Kms Vazio R$</th>
+									<th class="sizetext">Detalhes do Percurso</th>
+									<th>Km vazio</th>
+									<th>Total Vazio R$</th>
 								</tr>
 								<tr>
-									<td><input type="text" /></td>
+									<td><input type="text" class="sizetext" /></td>
 									<td>
 										<input
+											class="sizetext"
 											type="number"
 											name=""
 											id="kmvazio"
@@ -126,13 +144,18 @@
 						<div class="cheio">
 							<table id="cheio">
 								<tr>
-									<th>Percuso</th>
+									<th class="sizetext">Detalhes do Percurso</th>
 									<th>Km Cheio</th>
-									<th>Total de Kms Cheio R$</th>
+									<th>Total Cheio R$</th>
 								</tr>
 								<tr>
 									<td>
-										<input type="text" name="percusoIda" id="percursoIda" />
+										<input
+											class="sizetext"
+											type="text"
+											name="percusoIda"
+											id="percursoIda"
+										/>
 									</td>
 									<td>
 										<input
@@ -164,7 +187,12 @@
 								<td><input type="date" name="" id="" /></td>
 								<td><input type="number" name="" id="" /></td>
 								<td>
-									<input type="currency" name="handleMoney" id="getMoney" />
+									<input
+										type="currency"
+										name="handleMoney"
+										id="getMoney"
+										placeholder="R$ 0,00"
+									/>
 								</td>
 								<td><input type="text" name="" id="" /></td>
 							</tr>
@@ -184,28 +212,36 @@
 								<td><input type="text" /></td>
 								<td><input type="text" /></td>
 								<td><input type="number" name="" id="" /></td>
-								<td><input type="number" name="" id="" /></td>
+								<td>
+									<input type="number" name="" id="" placeholder="R$ 0,00" />
+								</td>
 								<td><input type="text" name="" id="" /></td>
 							</tr>
 							<tr>
 								<td><input type="text" /></td>
 								<td><input type="text" /></td>
 								<td><input type="number" name="" id="" /></td>
-								<td><input type="number" name="" id="" /></td>
+								<td>
+									<input type="number" name="" id="" placeholder="R$ 0,00" />
+								</td>
 								<td><input type="text" name="" id="" /></td>
 							</tr>
 							<tr>
 								<td><input type="text" /></td>
 								<td><input type="text" /></td>
 								<td><input type="number" name="" id="" /></td>
-								<td><input type="number" name="" id="" /></td>
+								<td>
+									<input type="number" name="" id="" placeholder="R$ 0,00" />
+								</td>
 								<td><input type="text" name="" id="" /></td>
 							</tr>
 							<tr>
 								<td><input type="text" /></td>
 								<td><input type="text" /></td>
 								<td><input type="number" name="" id="" /></td>
-								<td><input type="number" name="" id="" /></td>
+								<td>
+									<input type="number" name="" id="" placeholder="R$ 0,00" />
+								</td>
 								<td><input type="text" name="" id="" /></td>
 							</tr>
 						</table>
