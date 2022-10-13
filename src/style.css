@@ -22,9 +22,19 @@ html {
 	background-color: black;
 	padding: 10px;
 	padding-left: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 .title {
 	font: var(--title-font-size) var(--title-font);
+}
+.menu {
+	display: flex;
+	gap: 50px;
+}
+.menu a {
+	color: white;
 }
 .newtrip {
 	padding: 5px 40px;
@@ -122,4 +132,11 @@ th.sizetext {
 }
 input.sizetext {
 	width: 100%;
+}
+
+.calendar {
+	padding: 25px;
+}
+.calendar table {
+	margin: 1px;
 }

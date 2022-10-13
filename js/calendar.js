@@ -1,39 +1,31 @@
 var eventsDate = [
 	{
-		title: "Exemplo 3",
-		start: "2022-08-12T10:30:00",
-		end: "2022-08-12T12:30:00",
-	},
-	{
-		title: "Exemplo 2",
-		start: "2022-08-12T12:00:00",
-	},
-	{
-		title: "Exemplo",
-		start: "2022-08-12T14:30:00",
-	},
-	{
 		title: "VAN Sprinter - Fatima do Sul x Monte Mor",
-		start: "2022-08-13",
-		end: "2022-08-17",
+		start: "2022-10-13",
+		end: "2022-10-19",
 	},
 	{
 		title: "LD 1200- Fatima do Sul x Monte Mor",
-		start: "2022-08-13",
-		end: "2022-08-17",
+		start: "2022-10-13",
+		end: "2022-10-17",
+		backgroundColor: "#008000",
 	},
 	{
 		title: "Evento com URL",
 		url: "http://google.com/",
-		start: "2022-08-28",
+		start: "2022-10-28",
 	},
 ];
+
+// data para YYYY-MM-DD
+var todayDate = new Date().toISOString().slice(0, 10);
+console.log(todayDate);
 
 document.addEventListener("DOMContentLoaded", function () {
 	var calendarEl = document.getElementById("calendar");
 	var calendar = new FullCalendar.Calendar(calendarEl, {
 		initialView: "dayGridMonth",
-		initialDate: "2022-08-07",
+		initialDate: todayDate,
 		headerToolbar: {
 			left: "prev,next today",
 			center: "title",
@@ -42,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		events: eventsDate,
 		locale: "pt-br",
 	});
-
+	calendar.setOption("height", 700);
 	calendar.render();
 });
 
