@@ -187,7 +187,6 @@
 								<th>Nome do Hotel</th>
 								<th>Check-in</th>
 								<th>Check-Out</th>
-								<th>Diárias</th>
 								<th>Valor Total</th>
 								<th>Observações</th>
 							</tr>
@@ -195,7 +194,6 @@
 								<td><input type="text" class="sizetext" /></td>
 								<td><input type="date" name="" id="" /></td>
 								<td><input type="date" name="" id="" /></td>
-								<td><input type="number" name="" id="" /></td>
 								<td>
 									<input
 										type="currency"
@@ -300,8 +298,9 @@
 											class="sizetext"
 											type="number"
 											name=""
-											id=""
+											id="margem"
 											placeholder="Informe %"
+											onChange="resumomargen()"
 										/>
 									</td>
 									<td>R$ 0,00</td>

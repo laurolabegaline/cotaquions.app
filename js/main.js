@@ -212,17 +212,11 @@ function resumoHosp() {
 }
 
 function resumocusto() {
-	var nan = 0 / 0;
-	var eNaN = Number.isNaN(nan); // eNaN vai ser true, pois zero sobre zero não é um número
-
-	var numero = parseInt("xpto");
-	if (Number.isNaN(numero)) numero = 0;
-
 	let custo1 = document.querySelector("#custo1").value;
 	let custo2 = document.querySelector("#custo2").value;
 	let custo3 = document.querySelector("#custo3").value;
 	let custo4 = document.querySelector("#custo4").value;
-	let somacustos =
+	var somacustos =
 		(parseInt(custo1) || 0) +
 		(parseInt(custo2) || 0) +
 		(parseInt(custo3) || 0) +
@@ -233,4 +227,17 @@ function resumocusto() {
 	});
 	let resumocusto = document.querySelector("#resumocusto");
 	resumocusto.innerText = somacustoformated;
+
+	console.log(somacustos);
 }
+
+// function resumomargen() {
+// 	let margem = document.querySelector("#margem").value;
+// 	console.log(margem);
+// 	let kmtotal = document.querySelector("#resumoKmTotal");
+// 	console.log(kmtotal);
+// }
+// let hospedagemvlr = document.querySelector("#hospedagemVlr");
+// let resumocusto = document.querySelector("#resumocusto").value;
+// let somacustos = (parseInt(kmtotal) || 0) + (parseInt(hospedagemvlr) || 0);
+// console.log(somacustos);
