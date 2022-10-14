@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: var(--body-font);
+	font-size: 1.1rem;
 }
 html {
 	scroll-behavior: smooth;
@@ -101,22 +102,29 @@ input.button {
 	border-radius: 10px;
 	text-align: center;
 }
-table,
-th,
-td {
-	margin: 5px 0px 20px 20px;
-	border: 1px solid rgb(173, 173, 173);
+
+table {
+	border: 1px solid rgb(186, 186, 186);
+	margin: 10px;
+	width: 98%;
 	border-radius: 5px;
 }
 th {
 	background-color: var(--color-theme);
-	color: aliceblue;
-	padding: 5px 30px;
-	align-items: center;
+	color: white;
+	border-radius: 4px;
 }
+
 td {
+	border: 1px solid rgb(186, 186, 186);
 	text-align: center;
+	border-radius: 2px;
 }
+::placeholder {
+	text-align: center;
+	color: rgb(212, 37, 37);
+}
+
 td input {
 	border: none;
 	margin: 0;
@@ -125,13 +133,16 @@ td input {
 	padding-left: 10px;
 	text-align: center;
 }
-th {
-}
-th.sizetext {
-	width: 60%;
-}
+
 input.sizetext {
 	width: 100%;
+	text-align: left;
+}
+.investimento {
+	text-align: left;
+	padding-left: 30px;
+	background-color: rgb(161, 161, 161);
+	color: white;
 }
 
 .calendar {

@@ -86,7 +86,33 @@ function AlterarValorKm() {
 		switch (veiculoSelect) {
 			case "priceLD":
 				{
-					let priceValorCheio = priceLD[fator] * kmcheio;
+					var priceValorCheio = priceLD[fator] * kmcheio;
+					var priceValorCheioFormatado = priceValorCheio.toLocaleString(
+						"pt-br",
+						{
+							style: "currency",
+							currency: "BRL",
+						}
+					);
+					var vlrkmcheio = document.querySelector("#valorKmCheio");
+					vlrkmcheio.innerText = priceValorCheioFormatado;
+					var priceValorVazio = priceLD[3] * kmvazio;
+					var priceValorVazioFormatado = priceValorVazio.toLocaleString(
+						"pt-br",
+						{
+							style: "currency",
+							currency: "BRL",
+						}
+					);
+					var vlrkmvazio = document.querySelector("#valorKmVazio");
+					vlrkmvazio.innerText = priceValorVazioFormatado;
+
+					attresumo();
+				}
+				break;
+			case "priceG6":
+				{
+					var priceValorCheio = priceG6[fator] * kmcheio;
 					var priceValorCheioFormatado = priceValorCheio.toLocaleString(
 						"pt-br",
 						{
@@ -96,7 +122,7 @@ function AlterarValorKm() {
 					);
 					let vlrkmcheio = document.querySelector("#valorKmCheio");
 					vlrkmcheio.innerText = priceValorCheioFormatado;
-					let priceValorVazio = priceLD[3] * kmvazio;
+					var priceValorVazio = priceG6[3] * kmvazio;
 					var priceValorVazioFormatado = priceValorVazio.toLocaleString(
 						"pt-br",
 						{
@@ -104,41 +130,24 @@ function AlterarValorKm() {
 							currency: "BRL",
 						}
 					);
-					let vlrkmvazio = document.querySelector("#valorKmVazio");
+					var vlrkmvazio = document.querySelector("#valorKmVazio");
 					vlrkmvazio.innerText = priceValorVazioFormatado;
-				}
-				break;
-			case "priceG6":
-				{
-					let priceValor = priceG6[fator] * kmcheio;
-					var priceValorFormatado = priceValor.toLocaleString("pt-br", {
-						style: "currency",
-						currency: "BRL",
-					});
-					let vlrkmcheio = document.querySelector("#valorKmCheio");
-					vlrkmcheio.innerText = priceValorFormatado;
-					let priceValorVazio = priceG6[3] * kmvazio;
-					var priceValorVazioFormatado = priceValorVazio.toLocaleString(
-						"pt-br",
-						{
-							style: "currency",
-							currency: "BRL",
-						}
-					);
-					let vlrkmvazio = document.querySelector("#valorKmVazio");
-					vlrkmvazio.innerText = priceValorVazioFormatado;
+					attresumo();
 				}
 				break;
 			case "priceVANF":
 				{
-					let priceValor = priceVANF[fator] * kmcheio;
-					var priceValorFormatado = priceValor.toLocaleString("pt-br", {
-						style: "currency",
-						currency: "BRL",
-					});
+					var priceValorCheio = priceVANF[fator] * kmcheio;
+					var priceValorCheioFormatado = priceValorCheio.toLocaleString(
+						"pt-br",
+						{
+							style: "currency",
+							currency: "BRL",
+						}
+					);
 					let vlrkmcheio = document.querySelector("#valorKmCheio");
-					vlrkmcheio.innerText = priceValorFormatado;
-					let priceValorVazio = priceVANF[3] * kmvazio;
+					vlrkmcheio.innerText = priceValorCheioFormatado;
+					var priceValorVazio = priceVANF[3] * kmvazio;
 					var priceValorVazioFormatado = priceValorVazio.toLocaleString(
 						"pt-br",
 						{
@@ -146,20 +155,24 @@ function AlterarValorKm() {
 							currency: "BRL",
 						}
 					);
-					let vlrkmvazio = document.querySelector("#valorKmVazio");
+					var vlrkmvazio = document.querySelector("#valorKmVazio");
 					vlrkmvazio.innerText = priceValorVazioFormatado;
+					attresumo();
 				}
 				break;
 			case "priceVANC":
 				{
-					let priceValor = priceVANC[fator] * kmcheio;
-					var priceValorFormatado = priceValor.toLocaleString("pt-br", {
-						style: "currency",
-						currency: "BRL",
-					});
+					var priceValorCheio = priceVANC[fator] * kmcheio;
+					var priceValorCheioFormatado = priceValorCheio.toLocaleString(
+						"pt-br",
+						{
+							style: "currency",
+							currency: "BRL",
+						}
+					);
 					let vlrkmcheio = document.querySelector("#valorKmCheio");
-					vlrkmcheio.innerText = priceValorFormatado;
-					let priceValorVazio = priceVANF[3] * kmvazio;
+					vlrkmcheio.innerText = priceValorCheioFormatado;
+					var priceValorVazio = priceVANF[3] * kmvazio;
 					var priceValorVazioFormatado = priceValorVazio.toLocaleString(
 						"pt-br",
 						{
@@ -167,14 +180,36 @@ function AlterarValorKm() {
 							currency: "BRL",
 						}
 					);
-					let vlrkmvazio = document.querySelector("#valorKmVazio");
+					var vlrkmvazio = document.querySelector("#valorKmVazio");
 					vlrkmvazio.innerText = priceValorVazioFormatado;
+					attresumo();
 				}
 				break;
 		}
+		function attresumo() {
+			let resumoKmTotal = document.querySelector("#resumoKmTotal");
+			let resumosomaTotal = priceValorCheio + priceValorVazio;
+			let resumosomaTotalFormatado = resumosomaTotal.toLocaleString("pt-br", {
+				style: "currency",
+				currency: "BRL",
+			});
+			resumoKmTotal.innerText = resumosomaTotalFormatado;
+			console.log("ola");
+		}
 	}
+
 	let slideimg = document.querySelector("#galeria");
 	let location = "./img/" + veiculoSelect + ".jpg";
 	slideimg.src = location;
 	alteravalor();
+}
+
+function resumoHosp() {
+	let vlrhospe = document.querySelector("#getMoney").value;
+	let vlrhospeformated = parseInt(vlrhospe).toLocaleString("pt-br", {
+		style: "currency",
+		currency: "BRL",
+	});
+	let resumoHosp = document.querySelector("#hospedagemVlr");
+	resumoHosp.innerText = vlrhospeformated;
 }
