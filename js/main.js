@@ -28,7 +28,6 @@ function attveiculo() {
 	let selecionar = document.querySelector("#veiculos");
 	let optionValue = selecionar.options[selecionar.selectedIndex];
 	let veiculoSelect = optionValue.value;
-	console.log(veiculoSelect);
 }
 //Formatar CPDF
 function formatarCampo(campoTexto) {
@@ -61,7 +60,6 @@ const priceVANC = [10, 3.75, 2.75, 2.2];
 function alteraimg() {
 	let slideimg = document.querySelector("#galeria");
 	let location = "./img/" + veiculoSelect + ".jpg";
-	console.log(location);
 	slideimg.src = location;
 }
 
@@ -194,7 +192,6 @@ function AlterarValorKm() {
 				currency: "BRL",
 			});
 			resumoKmTotal.innerText = resumosomaTotalFormatado;
-			console.log("ola");
 		}
 	}
 
