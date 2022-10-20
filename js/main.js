@@ -85,25 +85,25 @@ function AlterarValorKm() {
 			case "priceLD":
 				{
 					var priceValorCheio = priceLD[fator] * kmcheio;
-					var priceValorCheioFormatado = priceValorCheio.toLocaleString(
-						"pt-br",
-						{
-							style: "currency",
-							currency: "BRL",
-						}
-					);
+					// var priceValorCheioFormatado = priceValorCheio.toLocaleString(
+					// 	"pt-br",
+					// 	{
+					// 		style: "currency",
+					// 		currency: "BRL",
+					// 	}
+					// );
 					var vlrkmcheio = document.querySelector("#valorKmCheio");
-					vlrkmcheio.innerText = priceValorCheioFormatado;
+					vlrkmcheio.innerText = priceValorCheio;
 					var priceValorVazio = priceLD[3] * kmvazio;
-					var priceValorVazioFormatado = priceValorVazio.toLocaleString(
-						"pt-br",
-						{
-							style: "currency",
-							currency: "BRL",
-						}
-					);
+					// var priceValorVazioFormatado = priceValorVazio.toLocaleString(
+					// 	"pt-br",
+					// 	{
+					// 		style: "currency",
+					// 		currency: "BRL",
+					// 	}
+					// );
 					var vlrkmvazio = document.querySelector("#valorKmVazio");
-					vlrkmvazio.innerText = priceValorVazioFormatado;
+					vlrkmvazio.innerText = priceValorVazio;
 
 					attresumo();
 				}
@@ -111,75 +111,75 @@ function AlterarValorKm() {
 			case "priceG6":
 				{
 					var priceValorCheio = priceG6[fator] * kmcheio;
-					var priceValorCheioFormatado = priceValorCheio.toLocaleString(
-						"pt-br",
-						{
-							style: "currency",
-							currency: "BRL",
-						}
-					);
+					// var priceValorCheioFormatado = priceValorCheio.toLocaleString(
+					// 	"pt-br",
+					// 	{
+					// 		style: "currency",
+					// 		currency: "BRL",
+					// 	}
+					// );
 					let vlrkmcheio = document.querySelector("#valorKmCheio");
-					vlrkmcheio.innerText = priceValorCheioFormatado;
+					vlrkmcheio.innerText = priceValorCheio;
 					var priceValorVazio = priceG6[3] * kmvazio;
-					var priceValorVazioFormatado = priceValorVazio.toLocaleString(
-						"pt-br",
-						{
-							style: "currency",
-							currency: "BRL",
-						}
-					);
+					// var priceValorVazioFormatado = priceValorVazio.toLocaleString(
+					// 	"pt-br",
+					// 	{
+					// 		style: "currency",
+					// 		currency: "BRL",
+					// 	}
+					// );
 					var vlrkmvazio = document.querySelector("#valorKmVazio");
-					vlrkmvazio.innerText = priceValorVazioFormatado;
+					vlrkmvazio.innerText = priceValorVazio;
 					attresumo();
 				}
 				break;
 			case "priceVANF":
 				{
 					var priceValorCheio = priceVANF[fator] * kmcheio;
-					var priceValorCheioFormatado = priceValorCheio.toLocaleString(
-						"pt-br",
-						{
-							style: "currency",
-							currency: "BRL",
-						}
-					);
+					// var priceValorCheioFormatado = priceValorCheio.toLocaleString(
+					// 	"pt-br",
+					// 	{
+					// 		style: "currency",
+					// 		currency: "BRL",
+					// 	}
+					// );
 					let vlrkmcheio = document.querySelector("#valorKmCheio");
-					vlrkmcheio.innerText = priceValorCheioFormatado;
+					vlrkmcheio.innerText = priceValorCheio;
 					var priceValorVazio = priceVANF[3] * kmvazio;
-					var priceValorVazioFormatado = priceValorVazio.toLocaleString(
-						"pt-br",
-						{
-							style: "currency",
-							currency: "BRL",
-						}
-					);
+					// var priceValorVazioFormatado = priceValorVazio.toLocaleString(
+					// 	"pt-br",
+					// 	{
+					// 		style: "currency",
+					// 		currency: "BRL",
+					// 	}
+					// );
 					var vlrkmvazio = document.querySelector("#valorKmVazio");
-					vlrkmvazio.innerText = priceValorVazioFormatado;
+					vlrkmvazio.innerText = priceValorVazio;
 					attresumo();
 				}
 				break;
 			case "priceVANC":
 				{
 					var priceValorCheio = priceVANC[fator] * kmcheio;
-					var priceValorCheioFormatado = priceValorCheio.toLocaleString(
-						"pt-br",
-						{
-							style: "currency",
-							currency: "BRL",
-						}
-					);
+					// var priceValorCheioFormatado = priceValorCheio.toLocaleString(
+					// 	"pt-br",
+					// 	{
+					// 		style: "currency",
+					// 		currency: "BRL",
+					// 	}
+					// );
 					let vlrkmcheio = document.querySelector("#valorKmCheio");
-					vlrkmcheio.innerText = priceValorCheioFormatado;
+					vlrkmcheio.innerText = priceValorCheio;
 					var priceValorVazio = priceVANF[3] * kmvazio;
-					var priceValorVazioFormatado = priceValorVazio.toLocaleString(
-						"pt-br",
-						{
-							style: "currency",
-							currency: "BRL",
-						}
-					);
+					// var priceValorVazioFormatado = priceValorVazio.toLocaleString(
+					// 	"pt-br",
+					// 	{
+					// 		style: "currency",
+					// 		currency: "BRL",
+					// 	}
+					// );
 					var vlrkmvazio = document.querySelector("#valorKmVazio");
-					vlrkmvazio.innerText = priceValorVazioFormatado;
+					vlrkmvazio.innerText = priceValorVazio;
 					attresumo();
 				}
 				break;
@@ -187,11 +187,7 @@ function AlterarValorKm() {
 		function attresumo() {
 			let resumoKmTotal = document.querySelector("#resumoKmTotal");
 			let resumosomaTotal = priceValorCheio + priceValorVazio;
-			let resumosomaTotalFormatado = resumosomaTotal.toLocaleString("pt-br", {
-				style: "currency",
-				currency: "BRL",
-			});
-			resumoKmTotal.innerText = resumosomaTotalFormatado;
+			resumoKmTotal.innerText = resumosomaTotal;
 		}
 	}
 
@@ -199,16 +195,18 @@ function AlterarValorKm() {
 	let location = "./img/" + veiculoSelect + ".jpg";
 	slideimg.src = location;
 	alteravalor();
+	resumomargen();
 }
 
 function resumoHosp() {
 	let vlrhospe = document.querySelector("#getMoney").value;
-	let vlrhospeformated = parseInt(vlrhospe).toLocaleString("pt-br", {
-		style: "currency",
-		currency: "BRL",
-	});
+	// let vlrhospeformated = parseInt(vlrhospe).toLocaleString("pt-br", {
+	// 	style: "currency",
+	// 	currency: "BRL",
+	// });
 	let resumoHosp = document.querySelector("#hospedagemVlr");
-	resumoHosp.innerText = vlrhospeformated;
+	resumoHosp.innerText = vlrhospe;
+	resumomargen();
 }
 
 function resumocusto() {
@@ -221,23 +219,24 @@ function resumocusto() {
 		(parseInt(custo2) || 0) +
 		(parseInt(custo3) || 0) +
 		(parseInt(custo4) || 0);
-	let somacustoformated = somacustos.toLocaleString("pt-br", {
-		style: "currency",
-		currency: "BRL",
-	});
-	let resumocusto = document.querySelector("#resumocusto");
-	resumocusto.innerText = somacustoformated;
-
-	console.log(somacustos);
+	let resumocusto = document.querySelector("#resumocustos");
+	resumocusto.innerText = somacustos;
+	resumomargen();
 }
 
-// function resumomargen() {
-// 	let margem = document.querySelector("#margem").value;
-// 	console.log(margem);
-// 	let kmtotal = document.querySelector("#resumoKmTotal");
-// 	console.log(kmtotal);
-// }
-// let hospedagemvlr = document.querySelector("#hospedagemVlr");
-// let resumocusto = document.querySelector("#resumocusto").value;
-// let somacustos = (parseInt(kmtotal) || 0) + (parseInt(hospedagemvlr) || 0);
-// console.log(somacustos);
+function resumomargen() {
+	let margem = document.querySelector("#margem").value;
+	let kmtotal = document.querySelector("#resumoKmTotal").textContent;
+	let hospedagemvlr = document.querySelector("#hospedagemVlr").textContent;
+	let tdscustos = document.querySelector("#resumocustos").textContent;
+	let somacustos =
+		(parseInt(kmtotal) || 0) +
+		(parseInt(hospedagemvlr) || 0) +
+		(parseInt(tdscustos) || 0);
+	let percentualsoma = (somacustos * margem) / 100;
+	let vlrMargem = document.querySelector("#vlrMargem");
+	vlrMargem.innerHTML = percentualsoma;
+	let somaTotalCustos = somacustos + percentualsoma;
+	let sugestionVlr = document.querySelector("#sugestionVlr");
+	sugestionVlr.innerHTML = somaTotalCustos;
+}
